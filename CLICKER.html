@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8" />
+	</head>
+	<body onload = "zasoby.iloscKamieni(), zasoby.iloscDrewna(), paski.pasekKamieniarz(), paski.pasekDrwal()">
+	
+		<link rel = "stylesheet" type = "text/css" href = "style.css" />
+		<script src = "script.js"/> </script>
+		
+		<center>
+			<div id = "right">
+				<table width = "200px">
+					<tr><td class = "portfel" colspan = "2">PORTFEL</td></tr>
+					<tr><td><img src = "images\portfel.png" width = "80px" height = "100px" /></td><td class = "portfel" id = "portfel">10$</td></tr>
+				</table>
+			</div>
+			<div id = "bottom">
+				<table width = "200px">
+					<tr><td class = "portfel" colspan = "2">ZESPÓŁ</td></tr>
+					<tr><td><img src = "images\drwal.png" width = "80px" height = "100px" /></td><td class = "portfel" id = "liczba">0/4</td></tr>	
+				</table>	
+			</div>	
+				
+				
+			<div id = "center">	
+				<table>
+					<tr id = "naglowek">
+						<td>BUDYNEK</td>
+						<td>DODAJ/BUDUJ</td>
+						<td>USUŃ</td>
+						<td></td>
+						<td>ILOSC</td>
+						<td>SUROWIEC</td>
+						<td></td>
+						<td>CENA</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<img class = "obrazki" src = "images\domek.png" />
+						</td>
+						
+						<td>
+							<button onclick = "pracownicy.dodajKamieniarza()" id = "kamieniaRZ"> + </button>
+						</td>
+						
+						<td>
+							<button onclick = "pracownicy.usunKamieniarza()"> - </button>
+						</td>
+						
+						<td>
+							<div class = "ramka">
+								<div id = "pasek1">
+									
+								</div>
+							</div>
+						</td>
+						
+						<td class = "cenailosc" id = "iloscKamieni">
+							0x
+						</td>
+						
+						<td>
+							<img src = "images\kamien.png" />
+						</td>
+						
+						<td id = "sprzedacKamien">
+							<button class = "litery" onclick = "sprzedaj.sprzedajKamien()">SPRZEDAJ</button>
+						</td>
+						
+						<td class = "cenailosc" id = "cenaKamienia">
+							10$
+						</td>
+						
+					</tr>
+					
+					<tr>
+						<td>
+							<img class = "obrazki" src = "images\domek2.png" />
+						</td>
+						
+						<td>
+							<button onclick = "pracownicy.dodajDrwala()">+</button>
+						</td>
+						
+						<td>
+							<button onclick = "pracownicy.usunDrwala()"> - </button>
+						</td>
+						
+						<td>
+							<div class = "ramka">
+								<div id = "pasek2">
+									
+								</div>
+							</div>
+						</td>
+						
+						<td class = "cenailosc" id = "iloscDrewna">
+							0x
+						</td>
+						
+						<td>
+							<img src = "images\drewno.png" />
+						</td>
+						
+						<td id = "sprzedacDrewno">
+							<button class = "litery" onclick = "sprzedaj.sprzedajDrewno()">SPRZEDAJ</button>
+						</td>
+						
+						<td class = "cenailosc" id = "cenaDrewna">
+							5$
+						</td>
+						
+					</tr>
+					
+					<tr>
+						<td>
+							<img class = "obrazki" src = "images\tartak.png" />
+						</td>
+						
+						<td id = "mlotek1">
+							<button onclick = "tartak.budujTartak()"><img src = "images\buduj.png" class = "obrazki" /></button>
+						</td>
+						
+						<td id = "lista1">
+							<ul>
+								<li>8x   <img src = "images\drewno.png" width = "40px" height = "22px" /></li>
+								<li>4x   <img src = "images\kamien.png" width = "40px" height = "22px" /></li>
+							</ul>
+						</td>
+						
+						<td id = "pasek3">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td class = "cenailosc" id = "iloscDesek">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td id = "decha">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />	
+						</td>
+						
+						<td id = "sprzedaj1">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td class = "cenailosc" id = "cenaDeski">
+							3$
+						</td>
+					</tr>
+								
+					<tr>
+						<td>
+							<img class = "obrazki" src = "images\mlyn.png" />
+						</td>
+						
+						<td id = "mlotek2">		
+							<button onclick = "mlyn.budujMlyn()"><img src = "images\buduj.png" class = "obrazki" /></button>
+						</td>
+						
+						<td id = "lista2">
+							<ul>
+								<li>4x   <img src = "images\drewno.png" width = "40px" height = "22px" /></li>
+								<li>16x   <img src = "images\kamien.png" width = "40px" height = "22px" /></li>
+								<li>8x   <img src = "images\deska.png" width = "30px" height = "22px" /></li>
+							</ul>
+						</td>
+						
+						<td id = "pasek4">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td class = "cenailosc" id = "iloscCementu">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td id = "cement">
+								<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td id = "sprzedaj2">
+
+								<!--<button class = "litery" onclick = "zrobicCement">STWÓRZ</button>-->
+								<img src = "images\zakaz.png" width = "30px" height ="40px" />
+
+						</td>
+						
+						<td class = "cenailosc" id = "cenaCement">
+							2$
+						</td>
+						
+					</tr>
+									
+					<tr>
+						<td>
+							<img class = "obrazki" src = "images\fabryka.png" />
+						</td>
+						
+						<td id = "mlotek3">
+							<button onclick = "fabryka.budujFabryke()"><img src = "images\buduj.png" class = "obrazki" /></button>
+						</td>
+						
+						<td id = "lista3">
+							<ul>
+								<li>2x   <img src = "images\drewno.png" width = "40px" height = "22px" /></li>
+								<li>15x   <img src = "images\kamien.png" width = "40px" height = "22px" /></li>
+								<li>10x   <img src = "images\cement.png" width = "30px" height = "22px" /></li>
+							</ul>
+						</td>
+						
+						<td id = "pasek5">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td class = "cenailosc"  id = "iloscCegiel">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td id = "cegielka">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td id = "sprzedaj3">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td class = "cenailosc" id = "cenaCegly">
+							20$
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<img class = "obrazki" src = "images\huta.png" />
+						</td>
+						
+						<td id = "mlotekX">
+							<button onclick = "huta.budujHute()"><img src = "images\buduj.png" class = "obrazki" /></button>
+						</td>
+						
+						<td id = "listaX">
+							<ul>					
+								<li>10x   <img src = "images\kamien.png" width = "40px" height = "22px" /></li>
+								<li>10x   <img src = "images\cement.png" width = "30px" height = "22px" /></li>
+							</ul>
+						</td>
+						
+						<td id = "pasekX">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td class = "cenailosc"  id = "iloscSzkla">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td id = "szkielko">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td id = "sprzedajX">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td class = "cenailosc">
+							10$
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<img class = "obrazki" src = "images\zamek.png" />
+						</td>
+						
+						<td id = "mlotek4">
+							<button onclick = "zamek.budujZamek()"><img src = "images\buduj.png" class = "obrazki" /></button>
+						</td>
+						
+						<td id = "lista4">
+							<ul>
+								<li>10x   <img src = "images\cegla.png" width = "40px" height = "22px" /></li>
+								<li>10x   <img src = "images\kamien.png" width = "40px" height = "22px" /></li>
+								<li>10x   <img src = "images\cement.png" width = "30px" height = "22px" /></li>
+							</ul>
+						</td>
+						
+						<td id = "pasek6">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td class = "cenailosc"  id = "imper_ator">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td id = "imperator">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td id = "stanSie">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td id = "zamieszkac_zero">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<img class = "obrazki" src = "images\willa.png" />
+						</td>
+						
+						<td id = "mlotek5">
+							<button onclick = "willa.budujWille()"><img src = "images\buduj.png" class = "obrazki" /></button>
+						</td>
+						
+						<td id = "lista5">
+							<ul>
+								<li>15x   <img src = "images\cement.png" width = "30px" height = "22px" /></li>
+								<li>15x   <img src = "images\kamien.png" width = "40px" height = "22px" /></li>
+								<li>20x   <img src = "images\cegla.png" width = "30px" height = "22px" /></li>
+							</ul>
+						</td>
+						
+						<td id = "pasek7">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td class = "cenailosc" id = "zamieszkac_raz">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td id = "bet">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td id = "zamieszkaj1">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td id = "zamieszkac_dwa">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<img class = "obrazki" src = "images\dom.png" />
+						</td>
+						
+						<td id = "mlotek6">
+							<button onclick = "dom.budujDom()"><img src = "images\buduj.png" class = "obrazki" /></button>
+						</td>
+						
+						<td id = "lista8">
+							<ul>
+								<li>15x   <img src = "images\kamien.png" width = "40px" height = "22px" /></li>
+								<li>20x   <img src = "images\cement.png" width = "30px" height = "22px" /></li>
+								<li>20x   <img src = "images\cegla.png" width = "30px" height = "22px" /></li>
+							</ul>
+						</td>
+						
+						<td id = "pasek8">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td class = "cenailosc" id = "zamieszkac_trzy">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td id = "bet2">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td id = "zamieszkaj2">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td id = "zamieszkac_cztery">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<img class = "obrazki" src = "images\centrum.png" />
+						</td>
+						
+						<td id = "mlotek7">
+							<button onclick = "centrum.budujCentrum()"><img src = "images\buduj.png" class = "obrazki" /></button>
+						</td>
+						
+						<td id = "lista9">
+							<ul>
+								<li>20x   <img src = "images\kamien.png" width = "40px" height = "22px" /></li>
+								<li>20x   <img src = "images\szklo.png" width = "30px" height = "22px" /></li>
+								<li>20x   <img src = "images\cegla.png" width = "30px" height = "22px" /></li>
+							</ul>
+						</td>
+						
+						<td id = "pasek9">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td class = "cenailosc" id = "zamieszkac_piec">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td id = "bet3">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td id = "zamieszkaj3">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td id = "zamieszkac_szesc">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<img class = "obrazki" src = "images\hotel.png" />
+						</td>
+						
+						<td id = "mlotek8">
+							<button onclick = "hotel.budujHotel()"><img src = "images\buduj.png" class = "obrazki" /></button>
+						</td>
+						
+						<td id = "lista10">
+							<ul>
+								<li>10x   <img src = "images\cement.png" width = "30px" height = "22px" /></li>
+								<li>25x   <img src = "images\szklo.png" width = "30px" height = "22px" /></li>
+								<li>15x   <img src = "images\cegla.png" width = "30px" height = "22px" /></li>
+							</ul>
+						</td>
+						
+						<td id = "pasek10">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td class = "cenailosc" id = "zamieszkac_siedem">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td id = "bet4">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td  id = "zamieszkaj4">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td id = "zamieszkac_osiem">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<img class = "obrazki" src = "images\rakieta.png" />
+						</td>
+						
+						<td id = "mlotek9">
+							<button onclick = "rakieta.budujRakiete()"><img src = "images\buduj.png" class = "obrazki" /></button>
+						</td>
+						
+						<td id = "lista11">
+							<ul>
+								<li>300$</li>
+							</ul>
+						</td>
+						
+						<td id = "pasek11">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td class = "cenailosc" id = "zamieszkac_dziewiec">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td id = "bet5">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td id = "lec">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+						
+						<td id = "zamieszkac_dziesiec">
+							<img src = "images\zakaz.png" width = "30px" height ="40px" />
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id = "poziom">
+				<table>
+					<tr class = "cenailosc"><td>POZIOM</td></tr>
+					<tr><td id = "szosty" class = "obrazki"><img src = "images\szesc.png"></td></tr>
+					<tr><td id = "piaty" class = "obrazki"><img src = "images\piec.png"></td></tr>
+					<tr><td id = "czwarty" class = "obrazki"><img src = "images\cztery.png"></td></tr>
+					<tr><td id = "trzeci" class = "obrazki"><img src = "images\trzy.png"></td></tr>
+					<tr><td id = "drugi" class = "obrazki"><img src = "images\dwa.png"></td></tr>
+					<tr><td id = "pierwszy" class = "obrazki"><img src = "images\raz.png"></td></tr>
+				</table>
+			</div>
+		</center>
+	</body>
+</html>

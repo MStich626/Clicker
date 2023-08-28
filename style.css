@@ -1,0 +1,112 @@
+			.portfel
+			{
+				font-size:40px;
+				background-color:brown;
+				color:white;
+				padding:10px;
+			}
+			
+			#center
+			{
+				float:left;
+				margin-left:25%;
+			}
+			
+			#naglowek
+			{
+				font-size:19px;
+				background-color:brown;
+				color:white;
+			}
+			
+			#poziom
+			{
+				position:fixed;
+				margin-left:80%;
+				margin-top:7%;
+			}
+			
+			#right
+			{
+				position:fixed;
+				margin-right:80%;
+				margin-top:15%;
+			}
+			
+			#bottom
+			{
+				position:fixed;
+				margin-right:80%;
+				margin-top:27%;
+			}
+			
+			#td
+			{	
+				width:120px;
+				height:120px;				
+			}
+			
+			#pasek1
+			{
+				background-color:green;
+				width:0%;
+				height:30px;
+				max-width:120px;
+			}
+			
+			#pasek2
+			{
+				background-color:green;
+				width:0%;
+				height:30px;
+				max-width:120px;
+			}
+			
+
+			.obrazki
+			{
+				width:120px;
+				height:120px;
+			}
+			
+			
+			button
+			{
+				color:green;
+				width:130px;
+				height:130px;
+				font-size:100px;
+			}
+			
+			.litery
+			{
+				font-size:20px;
+			}
+			
+			.cenailosc
+			{
+				font-size:35px;
+				background-color:brown;
+				color:white;
+			}
+			
+			.ramka
+			{
+				width:120px;
+				height:30px;
+				border:black 1px solid;
+				text-align:center;
+			}
+			
+			table, td
+			{
+				border:2px solid black;
+				border-collapse:collapse;
+				text-align:center;
+			}
+			
+			ul
+			{
+				font-size:24px;
+				text-align:left;
+			}
